@@ -1,0 +1,6 @@
+cmd docker pull yandex/tutorial-catboost-clickhouse
+cmd docker run -it -p 8888:8888 -p 8123:8123 yandex/tutorial-catboost-clickhouse
+
+console create table
+
+$ clickhouse client --host 127.0.0.1 --query 'INSERT INTO amazon_train FORMAT CSVWithNames' < ~/amazon/train.csv
